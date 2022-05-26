@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --text-color: rgb(220 38 38);
+    --fill-color: rgb(248 113 113);
+    --fil-color-indicator: rgb(220 38 38);
+  }
+
+  .theme-dark {
+    --text-color: rgb(51 65 85);
+    --fill-color: rgb(148 163 184);
+    --fil-color-indicator: rgb(51 65 85);
+  }
+
+  .theme-purple {
+    --text-color: rgb(147 51 234);
+    --fill-color: rgb(192 132 252);
+    --fil-color-indicator: rgb(147 51 234);
+  }
+}
+
+@layer components {
+  .active-state {
+    @apply mr-8 last:mr-0 text-skin-base after:block after:h-2 after:w-2 after:bg-skin-indicator after:rounded 
+    flex flex-col items-center;
+  }
+  .inactive-state {
+    @apply mr-8 last:mr-0 text-skin-base;
+  }
+}
+
+/* Theme Switcher */
